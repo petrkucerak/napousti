@@ -1,13 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useGameState } from '@/hooks/useGameState';
+import WelcomeScreen from '@/components/WelcomeScreen';
+import SetupScreen from '@/components/SetupScreen';
+import AdminPanel from '@/components/AdminPanel';
 
 const Index = () => {
+  const {
+    state, setPhase, setTeams, moveTeam,
+    triggerEvent, tickEvent, clearEvent,
+    resetGame, doExport, doImport,
+  } = useGameState();
+
+  const handleStartSetup = () => setPhase('setup');
+
+  const handleStartGame = (teams: Parameters<typeof setTeams>[0]) => {
+    setTeams(teams);
+    setPhase('playing');
+  };
+
+  const handleImport = (json: string) => {
+    doImport(json);
+  };
+
+  if (state.phase === 'welcome') {
+    return <WelcomeScreen onStart={handleStartSetup} />;
+  }
+
+  if (state.phase === 'setup') {
+    return <SetupScreen onStart={handleStartGame} onImport={handleImport} />;
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <AdminPanel
+      state={state}
+      moveTeam={moveTeam}
+      triggerEvent={triggerEvent}
+      tickEvent={tickEvent}
+      clearEvent={clearEvent}
+      resetGame={resetGame}
+      doExport={doExport}
+      doImport={doImport}
+    />
   );
 };
 
