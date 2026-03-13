@@ -9,16 +9,8 @@
          "icon": "cards/icons/ukol.svg",
          "cards": [
             {
-               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
-               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
-            },
-            {
-               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
-               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
-            },
-            {
-               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
-               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
+               "title": "Složte báseň, do které zapojíte tato tři slova: Pokušení, Poušť, 40 dní.",
+               "note": "Matouš ve svém evangeliu, které se čte na první neděli postní (Mt 4,1-11) píše, o tom, jak byl Ježíš pokoušený na poušti, ale podařilo se mu odolat a svého pokušitele totáln setřít. Jak se daří tobě odolávat a co jsou největší pokušením, kterým právě čelíš?"
             }
          ]
       },
@@ -28,11 +20,7 @@
          "cards": [
             {
                "title": "Mojžíš uhodil holí do skláy a vytryskla z ní voda",
-               "note": "Tento příběh je psán v knize Numeri a vypráví o tom, jak Izraelití nevěři zas tak moc. Smůla, coo."
-            },
-            {
-               "title": "Mojžíš uhodil holí do skláy a vytryskla z ní voda",
-               "note": "Tento příběh je psán v knize Numeri a vypráví o tom, jak Izraelití nevěři zas tak moc. Smůla, coo."
+               "note": "Tento příběh je psán v knize Numeri (20,7-13) a vypráví o tom, jak Bůh zkoušel víru Izraelitů a protože mu Áron ani Mojžíš nevěřili, nidky nedošli do země zaslíbené. Co vy, jste na tom někdy podobně?"
             }
          ]
       },
@@ -41,24 +29,8 @@
          "icon": "cards/icons/kresleni.svg",
          "cards": [
             {
-               "title": "Žena u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
-            },
-            {
-               "title": "Žena u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
-            },
-            {
-               "title": "Žena u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
-            },
-            {
-               "title": "Žena u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
-            },
-            {
-               "title": "Žena u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+               "title": "Žena a Ježíš u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Z čeho čerpáte vy?"
             }
          ]
       },
@@ -67,32 +39,8 @@
          "icon": "cards/icons/mluveni.svg",
          "cards": [
             {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
-            },
-            {
-               "title": "Zelený čtvrtek.",
-               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+               "title": "Almužna",
+               "note": "Almužna je jednou ze součástí půstu. Co to ale přesně znamená? Jak přesně mohu almužnu dávat i já?"
             }
          ]
       },
@@ -105,19 +53,19 @@
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
             },
             {
-               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "title": "Pokaždé, když někdo řekně slovo půst, Ježíš nebo žena, musíte se všichni klepnout do hlavy.",
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
             },
             {
-               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "title": "Všechny katiřky se násobí dvěmi.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event nebo maximálně po 3 kola."
+            },
+            {
+               "title": "Čas na splnění aktivity se zkrátil o polovinu.",
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
             },
             {
-               "title": "Mluvte všichni pouze se samohlásakmi A.",
-               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
-            },
-            {
-               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "title": "Mluvte všichni pouze se samohlásakmi E.",
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
             }
          ]
