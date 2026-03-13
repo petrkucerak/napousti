@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
 
-## Project info
+***Jednoduchá vzdělávací interaktivní hra pro podporu na hodinu náboženství, která vychází ze hry aktivity a rozšiřuje ji o pár dalších typů úkolů.***
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Screenshot](cover.png)
 
-## How can I edit this code?
+# 40 dní na poušti
 
-There are several ways of editing your application.
+## Před hrou
 
-**Use Lovable**
+Připravte si vše potřebné na hru:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **PC se projektorem a spuštěnou [aplikací](https://napousti.petrkucerak.cz)**, která slouží jako mapa hry,
+- **kartičky s úkoly**, které rozložíte před sebe na hromádky podle čísel
+- a hrací kostku.
 
-Changes made via Lovable will be committed automatically to this repo.
+Rozdělte hráče do týmů. Aplikace umí zobrazit od 1 do 6 týmů. Každý tým by si měl vymyslet vlastní jméno.
 
-**Use your preferred IDE**
+> [!note]
+> Nedoporučují více jak 3 týmy, hra je poté zdlouhavá a je třeba udělat nějaké změny.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Průběh hry
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Týmy se postupně střídají. Na začátku vyberou hráče, který hodí kostkou a podle čísla otočí kartičku. Karty obsahují tyto typy aktivit:
 
-Follow these steps:
+- **úkol** - splňte následující úkol,
+- **pantomima** - předveďte pantomimou (scénka bez mluvení a zvuků) danou věc, osobu či situaci
+- **kreslení** - nakreslete (bez mluvení, zvuků, gest a psaní písmen či čísel) danou věc, osobu či situaci,
+- **mluvení** - popiště danou, osobu či situaci bez toho, aniž byste zmínili kořen slova,
+- **událost** - následující event platí do té doby, než se otočí další karta stejného typu.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Na každou aktivitu je časové omezení, které si zvolte sami na začátku hry a zaneste si ho do aplikace. Aplikace vám také umožní zobrazit o jaký typ aktivity se jedná a jaký tým ji realizuje.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Pohyb na mapě:
+- za **1. správnou** odpověď `+1`
+- za **2. a další správnou** odpověď v sérii `+2`
+- za **špatnou** odpověď `-1`
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Konec hry
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Tým, který se první dostane do cíle, vyhrává.
 
-**Edit a file directly in GitHub**
+> [!note]
+> Cílem aktivity je rozpoutat diskuzi, zapálit do daného tématu spíše než do hry.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Generování kartiček
 
-**Use GitHub Codespaces**
+Pro generování kartiček funguje jedoduchý python skritp, který zavoláte a vygeneruje vám kartičky na základě json zadání. Kartičky si jednoduše vytisknete a zalaminujete.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Customizace aplikace
 
-## What technologies are used for this project?
+Aplikace nemusí být určtena pouze pro dobu postní a putování na poušti. Upravte si ji dle potřeba, pojmenujte si stanoviště jak chcete, nahrajte si do pozadí fotku dle libosti. Aplikace podporuje základní konfiguraci pomocí json formátu. Pro více si udělejte fork repa a zapracujte sami. Budu rád, pokud pošlete merge zpátky.
 
-This project is built with:
+## Disclaimer
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Aplikace je hobby projekt. Neručím za obsah ani za její funkčnost. Obecně rozšiřujte a využívejte dle libosti. Z velké části pro ušetření času se jedné o vibecode, takže feel free používat dále. Budu jen rád, pokud vždy zmíníte zdroj, popr. vše bude vycházet z forku tohoto repa.
