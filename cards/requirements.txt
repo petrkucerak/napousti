@@ -1,0 +1,3 @@
+reportlab>=4.0
+svglib>=1.0
+Pillow>=10.0

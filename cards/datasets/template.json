@@ -1,0 +1,126 @@
+{
+   "setName": "Template Set",
+   "setVersion": "1.0.0",
+   "description": "This is template set for card generation",
+   "footerText": "napousti.petrkucerak.cz",
+   "data": [
+      {
+         "categoryName": "Úkol",
+         "icon": "cards/icons/ukol.svg",
+         "cards": [
+            {
+               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
+               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
+            },
+            {
+               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
+               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
+            },
+            {
+               "title": "Udělejte žviou sochu z lidí ve tvaru kříže.",
+               "note": "Víte, že kříž pochází z roku 29773 a vypráví příběh o tom, jak se dva mladí lidé do sebe nebezpečně zamilovali až je to stálo celý život?"
+            }
+         ]
+      },
+      {
+         "categoryName": "Pantomima",
+         "icon": "cards/icons/pantomima.svg",
+         "cards": [
+            {
+               "title": "Mojžíš uhodil holí do skláy a vytryskla z ní voda",
+               "note": "Tento příběh je psán v knize Numeri a vypráví o tom, jak Izraelití nevěři zas tak moc. Smůla, coo."
+            },
+            {
+               "title": "Mojžíš uhodil holí do skláy a vytryskla z ní voda",
+               "note": "Tento příběh je psán v knize Numeri a vypráví o tom, jak Izraelití nevěři zas tak moc. Smůla, coo."
+            }
+         ]
+      },
+      {
+         "categoryName": "Kreslení",
+         "icon": "cards/icons/kresleni.svg",
+         "cards": [
+            {
+               "title": "Žena u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+            },
+            {
+               "title": "Žena u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+            },
+            {
+               "title": "Žena u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+            },
+            {
+               "title": "Žena u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+            },
+            {
+               "title": "Žena u studny",
+               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Jak z něho plně čepráte vy?"
+            }
+         ]
+      },
+      {
+         "categoryName": "Mluvení",
+         "icon": "cards/icons/mluveni.svg",
+         "cards": [
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            },
+            {
+               "title": "Zelený čtvrtek.",
+               "note": "Zelený není protože by se jedl špenát, ale protože legenda praví, že tohoto dne, měl apoštol Jidáš zelený průjem."
+            }
+         ]
+      },
+      {
+         "categoryName": "Event",
+         "icon": "cards/icons/event.svg",
+         "cards": [
+            {
+               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
+            },
+            {
+               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
+            },
+            {
+               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
+            },
+            {
+               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
+            },
+            {
+               "title": "Mluvte všichni pouze se samohlásakmi A.",
+               "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
+            }
+         ]
+      }
+   ]
+}
