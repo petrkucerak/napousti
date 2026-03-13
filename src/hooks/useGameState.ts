@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import {
-  GameState, GameEvent, Team,
+  GameState, GameEvent, Team, GameConfig,
   loadState, saveState, getChannel, getDefaultState,
-  importState, exportState,
+  importState, exportState, getMapLocations,
 } from '@/lib/gameState';
 
 export function useGameState() {
@@ -17,7 +17,6 @@ export function useGameState() {
       }
     };
     ch.addEventListener('message', handler);
-    // Also listen for storage events (fallback)
     const storageHandler = (e: StorageEvent) => {
       if (e.key === 'desert-game-state' && e.newValue) {
         setState(JSON.parse(e.newValue));
@@ -46,15 +45,29 @@ export function useGameState() {
     updateState(s => ({ ...s, teams }));
   }, [updateState]);
 
+  const setConfig = useCallback((config: GameConfig) => {
+    updateState(s => {
+      const locations = getMapLocations(config);
+      return { ...s, config, mapSize: locations.length };
+    });
+  }, [updateState]);
+
+  const setDefaultEventTime = useCallback((time: number) => {
+    updateState(s => ({ ...s, defaultEventTime: time }));
+  }, [updateState]);
+
   const moveTeam = useCallback((teamId: string, delta: number) => {
-    updateState(s => ({
-      ...s,
-      teams: s.teams.map(t =>
-        t.id === teamId
-          ? { ...t, position: Math.max(0, Math.min(s.mapSize - 1, t.position + delta)) }
-          : t
-      ),
-    }));
+    updateState(s => {
+      const locations = getMapLocations(s.config);
+      return {
+        ...s,
+        teams: s.teams.map(t =>
+          t.id === teamId
+            ? { ...t, position: Math.max(0, Math.min(locations.length - 1, t.position + delta)) }
+            : t
+        ),
+      };
+    });
   }, [updateState]);
 
   const triggerEvent = useCallback((event: Omit<GameEvent, 'id' | 'active' | 'countdownRemaining'>) => {
@@ -100,6 +113,8 @@ export function useGameState() {
     state,
     setPhase,
     setTeams,
+    setConfig,
+    setDefaultEventTime,
     moveTeam,
     triggerEvent,
     tickEvent,

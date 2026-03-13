@@ -1,5 +1,22 @@
 // Game state types and management with BroadcastChannel synchronization
 
+export const EVENT_TYPES = [
+  { id: 'ukol', label: 'Úkol', icon: '📋', description: 'Splňte následující úkol' },
+  { id: 'pantomima', label: 'Pantomima', icon: '🎭', description: 'Předveďte pantomimou danou věc, osobu či situaci' },
+  { id: 'kresleni', label: 'Kreslení', icon: '✏️', description: 'Nakreslete danou věc, osobu či situaci' },
+  { id: 'mluveni', label: 'Mluvení', icon: '🗣️', description: 'Popište danou věc, osobu či situaci bez kořene slova' },
+  { id: 'udalost', label: 'Událost', icon: '⚡', description: 'Event platí do další karty stejného typu' },
+] as const;
+
+export type EventTypeId = typeof EVENT_TYPES[number]['id'];
+
+export interface GameConfig {
+  title?: string;
+  colors?: string[];
+  backgroundUrl?: string;
+  locations?: { name: string; icon: string }[];
+}
+
 export interface Team {
   id: string;
   name: string;
@@ -11,6 +28,8 @@ export interface GameEvent {
   id: string;
   title: string;
   description: string;
+  eventType: EventTypeId | '';
+  teamName: string;
   countdownTotal: number;
   countdownRemaining: number;
   active: boolean;
@@ -21,9 +40,11 @@ export interface GameState {
   teams: Team[];
   mapSize: number;
   activeEvent: GameEvent | null;
+  defaultEventTime: number;
+  config: GameConfig;
 }
 
-export const MAP_LOCATIONS = [
+export const DEFAULT_LOCATIONS = [
   { name: 'Start – tábor', icon: '⛺' },
   { name: 'Vyprahlá poušť', icon: '🏜️' },
   { name: 'Písečná bouře', icon: '🌪️' },
@@ -46,6 +67,12 @@ export const MAP_LOCATIONS = [
   { name: 'Cíl – zaslíbená země', icon: '🏁' },
 ];
 
+export function getMapLocations(config: GameConfig) {
+  return config.locations && config.locations.length > 0
+    ? config.locations
+    : DEFAULT_LOCATIONS;
+}
+
 export const TEAM_COLORS = [
   '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c',
 ];
@@ -66,15 +93,24 @@ export function getDefaultState(): GameState {
   return {
     phase: 'welcome',
     teams: [],
-    mapSize: MAP_LOCATIONS.length,
+    mapSize: DEFAULT_LOCATIONS.length,
     activeEvent: null,
+    defaultEventTime: 60,
+    config: {},
   };
 }
 
 export function loadState(): GameState {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return JSON.parse(saved);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Ensure new fields exist
+      return {
+        ...getDefaultState(),
+        ...parsed,
+      };
+    }
   } catch { /* ignore */ }
   return getDefaultState();
 }
@@ -89,5 +125,6 @@ export function exportState(state: GameState): string {
 }
 
 export function importState(json: string): GameState {
-  return JSON.parse(json);
+  const parsed = JSON.parse(json);
+  return { ...getDefaultState(), ...parsed };
 }

@@ -1,22 +1,26 @@
-import { MAP_LOCATIONS, Team, GameEvent } from '@/lib/gameState';
+import { Team, GameEvent, GameConfig, getMapLocations } from '@/lib/gameState';
 import desertBg from '@/assets/desert-bg.jpg';
 
 interface DesertMapProps {
   teams: Team[];
   activeEvent: GameEvent | null;
+  config: GameConfig;
 }
 
-const DesertMap = ({ teams, activeEvent }: DesertMapProps) => {
+const DesertMap = ({ teams, activeEvent, config }: DesertMapProps) => {
+  const locations = getMapLocations(config);
+  const bgImage = config.backgroundUrl || desertBg;
+  const title = config.title || '40 dní na poušti';
+
   return (
     <div
       className="relative flex min-h-screen flex-col overflow-hidden"
       style={{
-        backgroundImage: `url(${desertBg})`,
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center bottom',
       }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-desert-dark/40" />
 
       {/* Event bar */}
@@ -29,6 +33,11 @@ const DesertMap = ({ teams, activeEvent }: DesertMapProps) => {
           <span className="text-xl font-bold text-primary-foreground md:text-2xl">
             {activeEvent.title}
           </span>
+          {activeEvent.teamName && (
+            <span className="text-base font-semibold text-primary-foreground/90">
+              [{activeEvent.teamName}]
+            </span>
+          )}
           {activeEvent.description && (
             <span className="text-base text-primary-foreground/80">
               — {activeEvent.description}
@@ -50,18 +59,17 @@ const DesertMap = ({ teams, activeEvent }: DesertMapProps) => {
       {/* Title */}
       <div className="relative z-10 pt-6 text-center">
         <h1 className="text-4xl font-bold text-desert-gold text-display animate-shimmer md:text-5xl drop-shadow-lg">
-          40 dní na poušti
+          {title}
         </h1>
       </div>
 
       {/* Map path */}
       <div className="relative z-10 flex flex-1 items-center overflow-x-auto px-4 py-8">
         <div className="mx-auto flex items-end gap-1 md:gap-2">
-          {MAP_LOCATIONS.map((loc, i) => {
+          {locations.map((loc, i) => {
             const teamsHere = teams.filter(t => t.position === i);
             return (
               <div key={i} className="flex flex-col items-center" style={{ minWidth: '70px' }}>
-                {/* Team markers */}
                 <div className="mb-2 flex flex-wrap justify-center gap-1 min-h-[40px]">
                   {teamsHere.map(team => (
                     <div
@@ -75,21 +83,18 @@ const DesertMap = ({ teams, activeEvent }: DesertMapProps) => {
                   ))}
                 </div>
 
-                {/* Location node */}
                 <div className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl shadow-md transition-all md:h-16 md:w-16 md:text-3xl ${
-                  i === 0 || i === MAP_LOCATIONS.length - 1
+                  i === 0 || i === locations.length - 1
                     ? 'bg-desert-oasis/80 ring-2 ring-desert-gold'
                     : 'bg-desert-dark/60 backdrop-blur-sm'
                 }`}>
                   {loc.icon}
                 </div>
 
-                {/* Label */}
                 <span className="mt-1 max-w-[80px] text-center text-xs font-semibold text-primary-foreground drop-shadow-md md:text-sm">
                   {loc.name}
                 </span>
 
-                {/* Position number */}
                 <span className="mt-0.5 text-xs text-primary-foreground/60">
                   {i}
                 </span>

@@ -1,19 +1,22 @@
 import { useGameState } from '@/hooks/useGameState';
+import { Team, GameConfig } from '@/lib/gameState';
 import WelcomeScreen from '@/components/WelcomeScreen';
 import SetupScreen from '@/components/SetupScreen';
 import AdminPanel from '@/components/AdminPanel';
 
 const Index = () => {
   const {
-    state, setPhase, setTeams, moveTeam,
+    state, setPhase, setTeams, setConfig, setDefaultEventTime, moveTeam,
     triggerEvent, tickEvent, clearEvent,
     resetGame, doExport, doImport,
   } = useGameState();
 
   const handleStartSetup = () => setPhase('setup');
 
-  const handleStartGame = (teams: Parameters<typeof setTeams>[0]) => {
+  const handleStartGame = (teams: Team[], defaultTime: number, config: GameConfig) => {
     setTeams(teams);
+    setDefaultEventTime(defaultTime);
+    setConfig(config);
     setPhase('playing');
   };
 
@@ -22,7 +25,7 @@ const Index = () => {
   };
 
   if (state.phase === 'welcome') {
-    return <WelcomeScreen onStart={handleStartSetup} />;
+    return <WelcomeScreen onStart={handleStartSetup} config={state.config} />;
   }
 
   if (state.phase === 'setup') {

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { GameState, GameEvent, MAP_LOCATIONS } from '@/lib/gameState';
+import { GameState, GameEvent, EVENT_TYPES, EventTypeId, getMapLocations } from '@/lib/gameState';
 
 interface AdminPanelProps {
   state: GameState;
@@ -15,11 +15,14 @@ interface AdminPanelProps {
 const AdminPanel = ({
   state, moveTeam, triggerEvent, tickEvent, clearEvent, resetGame, doExport, doImport,
 }: AdminPanelProps) => {
-  const [eventTitle, setEventTitle] = useState('');
+  const [eventType, setEventType] = useState<EventTypeId | ''>('');
   const [eventDesc, setEventDesc] = useState('');
-  const [eventTime, setEventTime] = useState(60);
+  const [eventTime, setEventTime] = useState(state.defaultEventTime || 60);
+  const [eventTeam, setEventTeam] = useState('');
   const [showReset, setShowReset] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState<string | null>(null);
+
+  const locations = getMapLocations(state.config);
 
   // Countdown ticker
   useEffect(() => {
@@ -85,13 +88,15 @@ const AdminPanel = ({
   };
 
   const handleTriggerEvent = () => {
-    if (!eventTitle.trim()) return;
+    if (!eventType) return;
+    const preset = EVENT_TYPES.find(t => t.id === eventType);
     triggerEvent({
-      title: eventTitle,
-      description: eventDesc,
+      title: preset ? `${preset.icon} ${preset.label}` : '',
+      description: eventDesc || preset?.description || '',
+      eventType,
+      teamName: eventTeam,
       countdownTotal: eventTime,
     });
-    setEventTitle('');
     setEventDesc('');
   };
 
@@ -126,28 +131,34 @@ const AdminPanel = ({
                 <div className="flex-1">
                   <div className="text-lg font-bold text-foreground">{team.name}</div>
                   <div className="text-sm text-muted-foreground">
-                    Pozice: {team.position} / {MAP_LOCATIONS.length - 1}
-                    {MAP_LOCATIONS[team.position] && ` — ${MAP_LOCATIONS[team.position].icon} ${MAP_LOCATIONS[team.position].name}`}
+                    Pozice: {team.position} / {locations.length - 1}
+                    {locations[team.position] && ` — ${locations[team.position].icon} ${locations[team.position].name}`}
                   </div>
                 </div>
                 <div className="flex gap-2">
                   <button
                     onClick={e => { e.stopPropagation(); moveTeam(team.id, -1); }}
                     className="rounded-lg bg-destructive/20 px-3 py-2 text-sm font-bold text-foreground hover:bg-destructive/40 transition-colors"
+                    title="Špatná odpověď → posun zpět o 1"
                   >
                     -1
+                    <span className="block text-[10px] font-normal text-muted-foreground">špatně</span>
                   </button>
                   <button
                     onClick={e => { e.stopPropagation(); moveTeam(team.id, 1); }}
                     className="rounded-lg bg-accent/20 px-3 py-2 text-sm font-bold text-foreground hover:bg-accent/40 transition-colors"
+                    title="1. správná odpověď → posun o 1"
                   >
                     +1
+                    <span className="block text-[10px] font-normal text-muted-foreground">1. správně</span>
                   </button>
                   <button
                     onClick={e => { e.stopPropagation(); moveTeam(team.id, 2); }}
                     className="rounded-lg bg-primary/20 px-3 py-2 text-sm font-bold text-foreground hover:bg-primary/40 transition-colors"
+                    title="2. a další správná odpověď v sérii → posun o 2"
                   >
                     +2
+                    <span className="block text-[10px] font-normal text-muted-foreground">2.+ správně</span>
                   </button>
                 </div>
               </div>
@@ -163,6 +174,9 @@ const AdminPanel = ({
             <div className="space-y-3">
               <div className={`rounded-lg p-4 ${state.activeEvent.active ? 'bg-primary/10' : 'bg-destructive/10'}`}>
                 <div className="text-lg font-bold text-foreground">{state.activeEvent.title}</div>
+                {state.activeEvent.teamName && (
+                  <div className="text-sm font-semibold text-muted-foreground">Tým: {state.activeEvent.teamName}</div>
+                )}
                 {state.activeEvent.description && (
                   <div className="text-sm text-muted-foreground">{state.activeEvent.description}</div>
                 )}
@@ -181,14 +195,42 @@ const AdminPanel = ({
               </button>
             </div>
           ) : (
-            <div className="space-y-3">
-              <input
-                type="text"
-                placeholder="Název události"
-                value={eventTitle}
-                onChange={e => setEventTitle(e.target.value)}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-foreground"
-              />
+            <div className="space-y-4">
+              {/* Event type presets */}
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-foreground">Typ aktivity</label>
+                <div className="flex flex-wrap gap-2">
+                  {EVENT_TYPES.map(type => (
+                    <button
+                      key={type.id}
+                      onClick={() => setEventType(type.id)}
+                      className={`rounded-lg px-4 py-2 text-sm font-bold transition-all ${
+                        eventType === type.id
+                          ? 'bg-primary text-primary-foreground scale-105'
+                          : 'bg-secondary text-secondary-foreground hover:bg-primary/20'
+                      }`}
+                    >
+                      {type.icon} {type.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Team select */}
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-foreground">Tým</label>
+                <select
+                  value={eventTeam}
+                  onChange={e => setEventTeam(e.target.value)}
+                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-foreground"
+                >
+                  <option value="">— vyberte tým —</option>
+                  {state.teams.map(t => (
+                    <option key={t.id} value={t.name}>{t.name}</option>
+                  ))}
+                </select>
+              </div>
+
               <input
                 type="text"
                 placeholder="Popis (volitelné)"
@@ -209,7 +251,7 @@ const AdminPanel = ({
               </div>
               <button
                 onClick={handleTriggerEvent}
-                disabled={!eventTitle.trim()}
+                disabled={!eventType}
                 className="rounded-lg bg-primary px-6 py-2 text-base font-bold text-primary-foreground transition-all hover:brightness-110 disabled:opacity-50"
               >
                 🚀 Spustit událost

@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { Team, TEAM_COLORS } from '@/lib/gameState';
+import { Team, TEAM_COLORS, GameConfig } from '@/lib/gameState';
 
 interface SetupScreenProps {
-  onStart: (teams: Team[]) => void;
+  onStart: (teams: Team[], defaultTime: number, config: GameConfig) => void;
   onImport: (json: string) => void;
 }
 
 const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
   const [teamCount, setTeamCount] = useState(3);
+  const [defaultTime, setDefaultTime] = useState(60);
   const [teams, setTeams] = useState<{ name: string; color: string }[]>(
     Array.from({ length: 3 }, (_, i) => ({
       name: `Tým ${i + 1}`,
@@ -33,7 +34,7 @@ const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
       color: t.color,
       position: 0,
     }));
-    onStart(gameTeams);
+    onStart(gameTeams, defaultTime, {});
   };
 
   const handleImportClick = () => {
@@ -45,6 +46,33 @@ const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
       if (!file) return;
       const reader = new FileReader();
       reader.onload = () => onImport(reader.result as string);
+      reader.readAsText(file);
+    };
+    input.click();
+  };
+
+  const handleConfigImport = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json';
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const config: GameConfig = JSON.parse(reader.result as string);
+          const gameTeams: Team[] = teams.map((t, i) => ({
+            id: `team-${i}`,
+            name: t.name || `Tým ${i + 1}`,
+            color: config.colors?.[i] || t.color,
+            position: 0,
+          }));
+          onStart(gameTeams, defaultTime, config);
+        } catch {
+          alert('Neplatný konfigurační soubor.');
+        }
+      };
       reader.readAsText(file);
     };
     input.click();
@@ -63,7 +91,7 @@ const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
             Počet týmů
           </label>
           <div className="flex gap-2">
-            {[2, 3, 4, 5, 6].map(n => (
+            {[1, 2, 3, 4, 5, 6].map(n => (
               <button
                 key={n}
                 onClick={() => handleCountChange(n)}
@@ -77,6 +105,21 @@ const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Default event time */}
+        <div className="mb-6">
+          <label className="mb-2 block text-lg font-semibold text-foreground">
+            Výchozí čas na aktivitu (sekundy)
+          </label>
+          <input
+            type="number"
+            min={5}
+            max={600}
+            value={defaultTime}
+            onChange={e => setDefaultTime(Number(e.target.value))}
+            className="w-32 rounded-md border border-input bg-background px-3 py-2 text-lg text-foreground"
+          />
         </div>
 
         {/* Team config */}
@@ -121,6 +164,12 @@ const SetupScreen = ({ onStart, onImport }: SetupScreenProps) => {
             className="rounded-lg bg-secondary px-6 py-3 text-base font-semibold text-secondary-foreground transition-all hover:bg-secondary/80"
           >
             📂 Načíst uloženou hru (JSON)
+          </button>
+          <button
+            onClick={handleConfigImport}
+            className="rounded-lg bg-accent/80 px-6 py-3 text-base font-semibold text-foreground transition-all hover:bg-accent"
+          >
+            🎨 Načíst konfiguraci hry (JSON)
           </button>
         </div>
       </div>
