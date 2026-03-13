@@ -10,7 +10,103 @@
          "cards": [
             {
                "title": "Složte báseň, do které zapojíte tato tři slova: Pokušení, Poušť, 40 dní.",
-               "note": "Matouš ve svém evangeliu, které se čte na první neděli postní (Mt 4,1-11) píše, o tom, jak byl Ježíš pokoušený na poušti, ale podařilo se mu odolat a svého pokušitele totáln setřít. Jak se daří tobě odolávat a co jsou největší pokušením, kterým právě čelíš?"
+               "note": "Matouš ve svém evangeliu (Mt 4,1-11) popisuje, jak byl Ježíš pokoušen na poušti. Ježíš odolal pokušení a zůstal věrný Bohu. Jak se daří tobě odolávat pokušením ve tvém životě?"
+            },
+            {
+               "title": "Napište krátkou modlitbu, kterou by mohl Ježíš říkat na poušti.",
+               "note": "Ježíš strávil čtyřicet dní v modlitbě a půstu. Modlitba pomáhá člověku zůstat blízko Bohu. Jak vypadá tvoje osobní modlitba?"
+            },
+            {
+               "title": "Vymyslete tři dobré skutky, které můžete udělat během postní doby.",
+               "note": "Katechismus katolické církve (§1434) připomíná, že modlitba, půst a almužna jsou hlavní postní skutky. Jak můžeš ty pomoci druhým lidem?"
+            },
+            {
+               "title": "Napište krátký dopis Zacheovi.",
+               "note": "Zacheus se po setkání s Ježíšem rozhodl změnit svůj život (Lk 19,1-10). Jaké změny by člověk měl udělat, když pozná své chyby?"
+            },
+            {
+               "title": "Sepište seznam věcí, které vás nejvíce rozptylují od Boha.",
+               "note": "Postní doba je čas, kdy se máme znovu zaměřit na to nejdůležitější. Co tě nejvíce odvádí od modlitby nebo dobra?"
+            },
+            {
+               "title": "Napište krátký dialog mezi Ježíšem a slepým Bartimeem.",
+               "note": "Bartimeus věřil, že ho Ježíš může uzdravit (Mk 10,46-52). Jakou roli hraje víra v našem životě?"
+            },
+            {
+               "title": "Vymyslete tři způsoby, jak pomoci chudým.",
+               "note": "Církev učí, že solidarita s chudými je důležitá součást křesťanského života. Kde ve svém okolí můžeš pomoci?"
+            },
+            {
+               "title": "Sepište krátký příběh o odpuštění.",
+               "note": "Ježíš učí, že máme odpouštět stále znovu (Mt 18,21-22). Proč je někdy tak těžké odpustit?"
+            },
+            {
+               "title": "Vytvořte seznam věcí, za které chcete Bohu poděkovat.",
+               "note": "Vděčnost je důležitou součástí modlitby. Za co jsi Bohu nejvíce vděčný?"
+            },
+            {
+               "title": "Napište krátké předsevzetí na postní dobu.",
+               "note": "Postní doba je čas obrácení. Jakou konkrétní změnu bys chtěl ve svém životě udělat?"
+            },
+            {
+               "title": "Napište krátké podobenství o pomoci druhým.",
+               "note": "Ježíš často učil pomocí podobenství. Jak by vypadalo podobenství o pomoci dnes?"
+            },
+            {
+               "title": "Sepište, co by dnes znamenalo být dobrým Samaritánem.",
+               "note": "Podobenství o milosrdném Samaritánovi (Lk 10,25-37) ukazuje, že bližní je každý člověk v nouzi. Komu můžeš být bližním ty?"
+            },
+            {
+               "title": "Vymyslete krátký postní slib.",
+               "note": "Půst má pomoci změnit naše srdce. Jaký malý krok můžeš udělat dnes?"
+            },
+            {
+               "title": "Vytvořte komiks o Proměnění Páně na hoře.",
+               "note": "Matouš 17,1-9 (druhá neděle postní). Jak nám tento příběh dává naději a ukazuje Ježíšovu slávu uprostřed postu?"
+            },
+            {
+               "title": "Napište dopis boháči a Lazarovi z podobenství.",
+               "note": "Lukáš 16,19-31. Co nás učí o solidaritě s chudými podle sociální nauky papeže Františka (Fratelli Tutti)?"
+            },
+            {
+               "title": "Sestavte seznam 5 postních skutků podle Katechismu.",
+               "note": "KKC 1430–1439 o vnitřním obrácení. Jaké konkrétní skutky pokání můžeš udělat ty?"
+            },
+            {
+               "title": "Vymyslete moderní verzi příběhu o vzkříšení Lazara.",
+               "note": "Jan 11,1-45. Jak Ježíš volá nás k novému životu? Co v tobě potřebuje „vzkříšení“?"
+            },
+            {
+               "title": "Napište báseň o „živé vodě“.",
+               "note": "Jan 4,5-42 (třetí neděle postní). Co je pro tebe zdrojem živé vody, která nasytí srdce?"
+            },
+            {
+               "title": "Vytvořte plakát o péči o stvoření v postní době.",
+               "note": "Encyklika Laudato si’ papeže Františka. Jak půst podporuje ekologickou konverzi?"
+            },
+            {
+               "title": "Sepište dopis apoštolu Petrovi po jeho zapření.",
+               "note": "Matouš 26,69-75. Jak se vyrovnáváš se svými selháními a jak tě Ježíš vždy přijímá zpět?"
+            },
+            {
+               "title": "Vymyslete 3 způsoby almužny v digitální době.",
+               "note": "Mt 6,1-4 + Caritas in Veritate. Jak můžeš dávat almužnu i přes sociální sítě nebo aplikace?"
+            },
+            {
+               "title": "Napište krátký scénář o umývání nohou dnes.",
+               "note": "Jan 13,1-15. Jak můžeme sloužit druhým s pokorou v našich rodinách a školách?"
+            },
+            {
+               "title": "Složte modlitbu za sociální spravedlnost.",
+               "note": "Sociální učení církve (Fratelli Tutti). Jak půst pomáhá bojovat proti chudobě a nespravedlnosti?"
+            },
+            {
+               "title": "Vytvořte seznam „pokušení 21. století“.",
+               "note": "Mt 4,1-11. Kterým moderním pokušením (sociální sítě, konzumerismus) čelíš ty?"
+            },
+            {
+               "title": "Napište předsevzetí o „světle světa“.",
+               "note": "Jan 9 (uzdravení slepého). Jak můžeš být světlem pro druhé během postu?"
             }
          ]
       },
@@ -19,8 +115,96 @@
          "icon": "cards/icons/pantomima.svg",
          "cards": [
             {
-               "title": "Mojžíš uhodil holí do skláy a vytryskla z ní voda",
-               "note": "Tento příběh je psán v knize Numeri (20,7-13) a vypráví o tom, jak Bůh zkoušel víru Izraelitů a protože mu Áron ani Mojžíš nevěřili, nidky nedošli do země zaslíbené. Co vy, jste na tom někdy podobně?"
+               "title": "Mojžíš uhodil holí do skály a vytryskla voda",
+               "note": "Příběh z knihy Numeri (Nm 20,7-13) ukazuje, jak Bůh pečoval o Izraelity na poušti. Přesto lidé často pochybovali. Kdy se ti stává, že ztrácíš důvěru?"
+            },
+            {
+               "title": "Ježíš se modlí v Getsemanské zahradě",
+               "note": "Ježíš před svým utrpením prosí Otce o sílu (Mt 26,36-46). Co ti pomáhá ve chvílích strachu?"
+            },
+            {
+               "title": "Ježíš utišuje bouři",
+               "note": "Učedníci se báli, ale Ježíš bouři utišil (Mk 4,35-41). Komu důvěřuješ ve chvílích nejistoty?"
+            },
+            {
+               "title": "Rozmnožení chlebů a ryb",
+               "note": "Ježíš nasytil zástupy (Mt 14,13-21). Jak můžeme sdílet to, co máme?"
+            },
+            {
+               "title": "Zacheus leze na strom",
+               "note": "Zacheus chtěl vidět Ježíše (Lk 19,1-10). Co bys udělal ty, abys byl Ježíši blíž?"
+            },
+            {
+               "title": "Ježíš umývá učedníkům nohy",
+               "note": "Ježíš učí službě (Jan 13,1-15). Jak můžeš sloužit druhým?"
+            },
+            {
+               "title": "Milosrdný Samaritán pomáhá zraněnému",
+               "note": "Podobenství o pomoci bližnímu (Lk 10,25-37). Komu bys mohl pomoci dnes?"
+            },
+            {
+               "title": "Marnotratný syn se vrací domů",
+               "note": "Otec přijímá syna s radostí (Lk 15,11-32). Jaké to je odpustit?"
+            },
+            {
+               "title": "Ježíš vstupuje do Jeruzaléma",
+               "note": "Lidé vítají Ježíše palmami (Mt 21,1-11). Proč se někdy nadšení lidí rychle změní?"
+            },
+            {
+               "title": "Petr zapírá Ježíše",
+               "note": "Petr třikrát zapře Ježíše (Mt 26,69-75). Co dělat, když uděláme chybu?"
+            },
+            {
+               "title": "Marie maže Ježíšovi nohy olejem",
+               "note": "Maria projevuje Ježíši lásku (Jan 12,1-8). Jak můžeme Bohu projevit vděčnost?"
+            },
+            {
+               "title": "Ježíš nese kříž",
+               "note": "Ježíš nese kříž na Golgotu. Jak neseme své těžkosti?"
+            },
+            {
+               "title": "Ježíš je pokoušen ďáblem na poušti",
+               "note": "Matouš 4,1-11. Jak odoláváš pokušením v každodenním životě?"
+            },
+            {
+               "title": "Samaritánka rozmlouvá s Ježíšem u studny",
+               "note": "Jan 4,5-42. Z čeho čerpáš svou „živou vodu“?"
+            },
+            {
+               "title": "Ježíš uzdravuje slepého od narození",
+               "note": "Jan 9,1-41. Co tě „oslepuje“ a jak hledáš světlo Krista?"
+            },
+            {
+               "title": "Vzkříšení Lazara",
+               "note": "Jan 11,1-45. Věříš, že Ježíš může vzkřísit i to, co je v tobě mrtvé?"
+            },
+            {
+               "title": "Jidáš zrazuje Ježíše polibkem",
+               "note": "Matouš 26,47-56. Co je dnešní forma zrady a jak jí předcházet?"
+            },
+            {
+               "title": "Ukřižování Ježíše",
+               "note": "Jan 19,16-30. Jak prožíváš Ježíšovu oběť lásky?"
+            },
+            {
+               "title": "Maria Magdalena u prázdného hrobu",
+               "note": "Jan 20,1-18. Jaké je tvé osobní setkání se Vzkříšeným?"
+            },
+            {
+               "title": "Pilát si myje ruce",
+               "note": "Matouš 27,24-26. Kdy se vyhýbáme zodpovědnosti?"
+            },
+            {
+               "title": "Proměnění Ježíše na hoře Tábor",
+               "note": "Matouš 17,1-9. Jak vidíš Ježíšovu slávu i uprostřed kříže?"
+            },
+            {
+               "title": "Had na měděném sloupu",
+               "note": "Numeri 21,4-9. Jak pohled na kříž uzdravuje?"
+            },
+            {
+               "title": "Ježíš a žena cizoložnice",
+               "note": "Jan 8,1-11. Kdo z nás je bez hříchu?"
             }
          ]
       },
@@ -30,7 +214,95 @@
          "cards": [
             {
                "title": "Žena a Ježíš u studny",
-               "note": "Příběh se čte na třetí neděli postní a vypráví o tom, jak jsme vlastně všichni nenasyceni a lačníme po živé vodě, ale jediný, kdo nás může nasytit, tak je Kristus. Z čeho čerpáte vy?"
+               "note": "Ježíš mluví se Samařankou o živé vodě (Jan 4). Co znamená hledat skutečné naplnění?"
+            },
+            {
+               "title": "Ježíš na poušti",
+               "note": "Ježíš se postí 40 dní. Jak může vypadat ticho a modlitba?"
+            },
+            {
+               "title": "Milosrdný Samaritán",
+               "note": "Samaritán pomáhá zraněnému. Jak by vypadal tento příběh dnes?"
+            },
+            {
+               "title": "Marnotratný syn se vrací domů",
+               "note": "Otec přijímá syna. Jak vypadá radost z odpuštění?"
+            },
+            {
+               "title": "Rozmnožení chlebů",
+               "note": "Ježíš nasytí zástupy. Jak může malé dobro přinést velký užitek?"
+            },
+            {
+               "title": "Ježíš utišuje bouři",
+               "note": "Ježíš přináší pokoj. Co ti přináší klid?"
+            },
+            {
+               "title": "Zacheus na stromě",
+               "note": "Zacheus chce vidět Ježíše. Co znamená hledat Boha?"
+            },
+            {
+               "title": "Uzdravení slepého",
+               "note": "Ježíš vrací zrak slepému. Co znamená vidět pravdu?"
+            },
+            {
+               "title": "Ježíš v Getsemanech",
+               "note": "Ježíš se modlí. Jak vypadá důvěra v těžkých chvílích?"
+            },
+            {
+               "title": "Poslední večeře",
+               "note": "Ježíš dává učedníkům eucharistii. Co pro tebe znamená společné stolování?"
+            },
+            {
+               "title": "Ježíš nese kříž",
+               "note": "Ježíš přijímá utrpení z lásky. Jak můžeme nést kříž druhých?"
+            },
+            {
+               "title": "Prázdný hrob",
+               "note": "Ježíš vstal z mrtvých. Jak vypadá naděje?"
+            },
+            {
+               "title": "Ježíš pokoušen na poušti",
+               "note": "Mt 4,1-11. Jak pokušení vypadají v dnešním světě?"
+            },
+            {
+               "title": "Proměnění Páně",
+               "note": "Matouš 17,1-9. Jak nám tento příběh dává naději?"
+            },
+            {
+               "title": "Lazar vychází z hrobu",
+               "note": "Jan 11. Co znamená nový život v Kristu?"
+            },
+            {
+               "title": "Ježíš umývá nohy apoštolům",
+               "note": "Jan 13. Jak sloužit s pokorou?"
+            },
+            {
+               "title": "Křížová cesta",
+               "note": "Podle evangelii. Jak nás Ježíšova cesta učí trpělivosti?"
+            },
+            {
+               "title": "Ježíš na kříži",
+               "note": "Jan 19. Co je smysl oběti?"
+            },
+            {
+               "title": "Had na měděném sloupu",
+               "note": "Numeri 21,4-9. Jak se dívat na kříž s vírou?"
+            },
+            {
+               "title": "Ježíš a žena cizoložnice",
+               "note": "Jan 8,1-11. Kdo z nás je bez hříchu?"
+            },
+            {
+               "title": "Petr po zapření",
+               "note": "Matouš 26,69-75. Jak vypadá kajícnost?"
+            },
+            {
+               "title": "Maria Magdalena u hrobu",
+               "note": "Jan 20. Jaká je radost ze vzkříšení?"
+            },
+            {
+               "title": "Péče o stvoření",
+               "note": "Laudato si’. Jak půst chrání naši planetu?"
             }
          ]
       },
@@ -40,7 +312,95 @@
          "cards": [
             {
                "title": "Almužna",
-               "note": "Almužna je jednou ze součástí půstu. Co to ale přesně znamená? Jak přesně mohu almužnu dávat i já?"
+               "note": "Almužna je součástí postní doby. Jak můžeme pomoci lidem v nouzi?"
+            },
+            {
+               "title": "Půst",
+               "note": "Ježíš mluví o půstu (Mt 6,16-18). Proč se někdy vzdáváme věcí, které máme rádi?"
+            },
+            {
+               "title": "Modlitba",
+               "note": "Ježíš učí modlitbě. Jaký význam má modlitba v našem životě?"
+            },
+            {
+               "title": "Odpuštění",
+               "note": "Ježíš učí odpouštět. Proč je někdy odpuštění těžké?"
+            },
+            {
+               "title": "Pomoc chudým",
+               "note": "Církev zdůrazňuje solidaritu s chudými. Jak můžeš pomoci ty?"
+            },
+            {
+               "title": "Solidarita",
+               "note": "Sociální nauka církve mluví o solidaritě. Co znamená být solidární?"
+            },
+            {
+               "title": "Stvoření",
+               "note": "Papež František připomíná péči o stvoření. Jak se můžeme starat o přírodu?"
+            },
+            {
+               "title": "Milosrdenství",
+               "note": "Ježíš často mluví o milosrdenství. Jak můžeš být milosrdný?"
+            },
+            {
+               "title": "Víra",
+               "note": "Víra pomáhá člověku důvěřovat Bohu. Kdy ti víra pomohla?"
+            },
+            {
+               "title": "Obrácení",
+               "note": "Postní doba je čas obrácení. Co znamená změnit svůj život?"
+            },
+            {
+               "title": "Dobré skutky",
+               "note": "Ježíš vybízí ke konání dobra. Jaké dobré skutky můžeš dělat každý den?"
+            },
+            {
+               "title": "Naděje",
+               "note": "Zmrtvýchvstání přináší naději. Co ti dává naději?"
+            },
+            {
+               "title": "Živá voda",
+               "note": "Jan 4 – Samaritánka. Co tě opravdu nasycuje?"
+            },
+            {
+               "title": "Světlo víry",
+               "note": "Jan 9 – uzdravení slepého. Co je pro tebe světlo Krista?"
+            },
+            {
+               "title": "Vzkříšení a život",
+               "note": "Jan 11 – Lazar. Věříš v život věčný?"
+            },
+            {
+               "title": "Pokora a služba",
+               "note": "Jan 13 – umývání nohou. Jak sloužit druhým?"
+            },
+            {
+               "title": "Kajícnost",
+               "note": "Petr po zapření. Jak se vyrovnáváš se svými chybami?"
+            },
+            {
+               "title": "Ekologická konverze",
+               "note": "Laudato si’. Jak půst chrání stvoření?"
+            },
+            {
+               "title": "Bratrství",
+               "note": "Fratelli Tutti. Jak budovat bratrství v dnešním světě?"
+            },
+            {
+               "title": "Oběť lásky",
+               "note": "Jan 19 – kříž. Co znamená obětovat se pro druhé?"
+            },
+            {
+               "title": "Naděje vzkříšení",
+               "note": "Jan 20. Jak tě Vzkříšení povzbuzuje v těžkých chvílích?"
+            },
+            {
+               "title": "Důvěra v Boha",
+               "note": "Numeri 20 – voda ze skály. Kdy ztrácíš důvěru?"
+            },
+            {
+               "title": "Proměna srdce",
+               "note": "Matouš 17 – Proměnění. Jak se měníme díky Kristu?"
             }
          ]
       },
