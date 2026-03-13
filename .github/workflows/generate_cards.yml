@@ -10,6 +10,9 @@ jobs:
     name: 🔨 Generate cards PDF
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,3 +43,15 @@ jobs:
         with:
           name: cards
           path: cards/output/*.pdf
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: cards-${{ steps.date.outputs.date }}
+          name: Cards ${{ steps.date.outputs.date }}
+          files: cards/output/*.pdf
+          generate_release_notes: true
