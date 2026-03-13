@@ -47,7 +47,7 @@ const WelcomeScreen = ({ onStart, config }: WelcomeScreenProps) => {
           </button>
 
           <a
-            href="https://github.com/petrkucerak/desert-journey-game/blob/main/README.md"
+            href="https://github.com/petrkucerak/napousti/blob/main/README.md"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-secondary/80 px-6 py-3 text-base font-semibold text-secondary-foreground transition-all hover:bg-secondary hover:brightness-110 backdrop-blur-sm"
