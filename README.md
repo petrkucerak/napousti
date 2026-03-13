@@ -3,7 +3,7 @@
 
 ![Screenshot](cover.png)
 
-# 40 dní na poušti
+# 🏜️ Na poušti
 
 ## Před hrou
 
@@ -44,6 +44,9 @@ Tým, který se první dostane do cíle, vyhrává.
 
 ## Generování kartiček
 
+> [!tip]
+> Kartičky je možné generovat plně automaticky s využitím GitHub Actions. S commitem do mainu se automaticky zbuildí nový release, jehož součástí budou i všechny vyrenderované kartičky z json souborů ve zložce `cards/datasets`. 
+
 Pro generování kartiček je v repozitáři Python skript `cards/generate_cards.py`. Skript načte JSON dataset (např. `cards/datasets/template.json`) a vytvoří připravený PDF dokument se 2 stranami: na první straně jsou jednotlivé karty (8 karet na stránku, A4 landscape), na druhé straně jsou na záda kartiček náhodně rozložená čísla 1–6 s rovnoměrným výskytem.
 
 ### Jak spustit (lokálně)
@@ -68,10 +71,6 @@ Pro generování kartiček je v repozitáři Python skript `cards/generate_cards
    - `--seed 123`: Nastavte seed pro deterministické rozložení čísel na zadní straně.
 
    Výsledkem bude soubor `cards/datasets/template_cards.pdf`.
-
-### GitHub Actions
-
-Repozytorium obsahuje GitHub Actions workflow, který spustí generátor na nové změně v main větvi a výsledek uloží jako artefakt `cards.pdf`.
 
 ## Customizace aplikace
 
