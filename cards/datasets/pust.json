@@ -393,7 +393,7 @@
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event."
             },
             {
-               "title": "Všechny katiřky se násobí dvěmi.",
+               "title": "Všechny body se násobí dvěma.",
                "note": "Toto pravidlo platí, dokud se neotočí další kartička typu event nebo maximálně po 3 kola."
             },
             {
