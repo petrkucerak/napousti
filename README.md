@@ -44,7 +44,24 @@ Tým, který se první dostane do cíle, vyhrává.
 
 ## Generování kartiček
 
-Pro generování kartiček funguje jedoduchý python skritp, který zavoláte a vygeneruje vám kartičky na základě json zadání. Kartičky si jednoduše vytisknete a zalaminujete.
+Pro generování kartiček je v repozitáři Python skript `cards/generate_cards.py`. Skript načte JSON dataset (např. `cards/datasets/template.json`) a vytvoří připravený PDF dokument se 2 stranami: na první straně jsou jednotlivé karty (8 karet na stránku, A4 landscape), na druhé straně jsou na záda kartiček náhodně rozložená čísla 1–6 s rovnoměrným výskytem.
+
+### Jak spustit (lokálně)
+
+1. Nainstalujte Python 3.8+.
+2. Nainstalujte požadované balíčky:
+   ```bash
+   python -m pip install -r cards/requirements.txt
+   ```
+3. Spusťte generátor:
+   ```bash
+   python cards/generate_cards.py cards/datasets/template.json
+   ```
+   Výsledkem bude soubor `cards/datasets/template_cards.pdf`.
+
+### GitHub Actions
+
+Repozytorium obsahuje GitHub Actions workflow, který spustí generátor na nové změně v main větvi a výsledek uloží jako artefakt `cards.pdf`.
 
 ## Customizace aplikace
 
